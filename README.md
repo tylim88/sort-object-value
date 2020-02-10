@@ -32,39 +32,44 @@ import objSort from 'sort-object-value'
   lg: 992,
   gl: -992.34632,
  }
+```
 
-// ascending sort
+ascending sort
 
+```js
 const ascending = objSort(obj)
 
 console.log(ascending)
 // output
 // {
-// 			lx: -1200,
-// 			gl: -992.34632,
-// 			dm: -768.965,
-// 			ms: -576,
-// 			xs: 0,
-// 			sm: 576.28367,
-// 			md: 768,
-// 			lg: 992,
-// 			xl: 1200.23872,
-// 		}
+//  lx: -1200,
+//  gl: -992.34632,
+//  dm: -768.965,
+//  ms: -576,
+//  xs: 0,
+//  sm: 576.28367,
+//  md: 768,
+//  lg: 992,
+//  xl: 1200.23872,
+// }
+```
 
+descending sort
+
+```js
 const descending = objSort(obj,true)
 
 console.log(descending)
 // output
 // {
-// 			xl: 1200.23872,
-// 			lg: 992,
-// 			md: 768,
-// 			sm: 576.28367,
-// 			xs: 0,
-// 			ms: -576,
-// 			dm: -768.965,
-// 			gl: -992.34632,
-// 			lx: -1200,
-// 		}
-
+//  xl: 1200.23872,
+//  lg: 992,
+//  md: 768,
+//  sm: 576.28367,
+//  xs: 0,
+//  ms: -576,
+//  dm: -768.965,
+//  gl: -992.34632,
+//  lx: -1200,
+// }
 ```
