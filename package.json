@@ -3,11 +3,25 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "build/index.js",
+	"files": [
+		"build/index.js"
+	],
 	"scripts": {
+		"install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm i",
 		"test": "jest",
-		"build": "webpack --mode production"
+		"coverage": "jest --coverage",
+		"test:watch": "jest --watch",
+		"prepublishOnly": "npm run build -- --no-demo",
+		"build": "webpack --mode production",
+		"lint:fix": "npm run lint --fix"
 	},
-	"keywords": [],
+	"keywords": [
+		"object",
+		"sort",
+		"value",
+		"ascending",
+		"descending"
+	],
 	"author": "",
 	"license": "ISC",
 	"module": "src/index.js",
@@ -19,7 +33,9 @@
 		"babel-jest": "^25.1.0",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-flowtype": "^4.6.0",
 		"eslint-plugin-import": "^2.20.1",
+		"eslint-plugin-jest": "^23.7.0",
 		"eslint-plugin-prettier": "^3.1.2",
 		"husky": "^4.2.1",
 		"jest": "^25.1.0",
@@ -35,6 +51,8 @@
 			"plugin:import/errors",
 			"plugin:import/warnings",
 			"plugin:prettier/recommended",
+			"plugin:flowtype/recommended",
+			"plugin:jest/recommended",
 			"prettier"
 		],
 		"rules": {
