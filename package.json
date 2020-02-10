@@ -13,6 +13,7 @@
 		"test:watch": "jest --watch",
 		"prepublishOnly": "npm run build -- --no-demo",
 		"build": "webpack --mode production",
+		"lint": "eslint --cache --format codeframe --ext mjs,jsx,js src",
 		"lint:fix": "npm run lint --fix"
 	},
 	"keywords": [
